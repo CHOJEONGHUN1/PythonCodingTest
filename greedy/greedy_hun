@@ -1,0 +1,14 @@
+n = int(input())
+a = list(map(int, input().split())) # 공포도 입력 
+
+count = 0 # 인원 포함시키기
+result = 0 # 그룹 수 
+a.sort()
+
+for i in a: 
+    count = count + 1 
+    if count >= i: # 인원이 공포도 보다 크거나 같다면 
+        result = result + 1 # 그룹 수 +1 추가
+        count = 0 # 그룹 생성되면 인원 그릇 초기화
+        
+print(result) # 그룹 출력 
